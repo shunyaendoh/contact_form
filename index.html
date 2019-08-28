@@ -7,19 +7,29 @@
     <title>お問い合わせ</title>
 </head>
 <body>
+
     <h1>お問い合わせ情報入力</h1>
-    <form action="">
+
+<!-- action: 送信先URLの指定  -->
+<!-- method: GET or POST -->
+    <form action="./check.php" method="POST">
         <div>
                 <label for="name">名前</label>
-                <input type="text" name="" id="name">
+                <input type="text" name="username" id="name"> <!-- name: "username" 連想配列に入れるキー-->
         </div>
 
         <div>
                 <label for="email">メールアドレス</label>  <!-- forはidと同じ文字列だった場合文字をクリックしても反応する -->
-                <input type="text" name="" id="email">
+                <input type="text" name="email" id="email"> <!-- name: "email" 連想配列に入れるキー-->
+        </div>
+
+        <div>
+                <label for="content">お問い合わせ</label><br>
+                <textarea name="content" id="content" cols="30" rows="5"></textarea>
         </div>
 
         <input type="submit" value="送信">
+
     </form>
 </body>
 </html>
